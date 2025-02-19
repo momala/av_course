@@ -1,0 +1,11 @@
+How to Run build the docker:
+
+$ docker build -t ros2-turtlebot3:v1.0 .
+
+How to run the docker:
+
+docker run -it --rm --privileged --net=host  --env=DISPLAY  --env=QT_X11_NO_MITSHM=1  -v /tmp/.X11-unix:/tmp/.X11-unix  ros2-turtlebot3:v1.0
+
+how to run another terminal:
+
+docker exec -it <Find_Docker_Name> bash
