@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     python3-colcon-common-extensions \
     build-essential \
     git \
-    vim && \
+    gedit && \
     rm -rf /var/lib/apt/lists/*
 
 # Set environment variables
@@ -30,6 +30,8 @@ RUN echo 'export ROS_DOMAIN_ID=30 #TURTLEBOT3' >> ~/.bashrc
 RUN echo 'export TURTLEBOT3_MODEL=burger' >> ~/.bashrc
 RUN echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bashrc
 RUN echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
+RUN echo "export ROS_LOCALHOST_ONLY=1" >> ~/.bashrc
 
 # Default command
 CMD ["bash"]
+
