@@ -11,12 +11,14 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     ros-humble-nav2-bringup \
     ros-humble-turtlebot3 \
     ros-humble-turtlebot3-msgs \
+    ros-humble-tf-transformations \
     python3-colcon-common-extensions \
     build-essential \
     git \
     gedit \
     python3-pip && \
     pip3 install setuptools==58.2.0 && \
+    pip3 install transforms3d && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
     
 
